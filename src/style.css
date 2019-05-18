@@ -1,3 +1,13 @@
 body {
     background-color: #ffffff
 }
+
+.vh-60 {
+    height: 60vh;
+}
+
+.maceta{
+    width: 200px;
+    height: 200px;
+    transform: translateY(-12vh);
+}

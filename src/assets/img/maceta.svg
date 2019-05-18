@@ -1,9 +1,88 @@
-<?xml version="1.0"?><svg width="410.24207" height="958.85779" xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
- <metadata id="metadata6">image/svg+xmlkaktus25.11.2006Krystof JetmarZS a MS Machovo Nam.CZkaktuscactus</metadata>
- <g>
-  <title>Layer 1</title>
-  <path fill="#e2700e" fill-rule="evenodd" stroke="black" stroke-width="7" stroke-miterlimit="4" d="m22.5207,604.689026l69.341696,344.668945l236.577606,0l59.144012,-334.471985l-365.063314,-10.19696z" id="path1887"/>
-  <path fill="#e2700e" fill-rule="evenodd" stroke="black" stroke-width="7" stroke-miterlimit="4" d="m14.921005,597.089172l380.82106,-0.558228l0,53.254089l-380.775452,0.210632l-0.045609,-52.906494z" id="path1885"/>
- </g>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16px"
+   height="16px"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="dibujo-1.svg">
+  <defs
+     id="defs3869">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3803">
+      <rect
+         id="rect3805"
+         width="411.49652"
+         height="380.95782"
+         x="-0.41823992"
+         y="573.13885"
+         style="stroke-width:0.48453319" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.627417"
+     inkscape:cx="3.9242475"
+     inkscape:cy="6.824004"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:grid-bbox="true" />
+  <metadata
+     id="metadata3872">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       transform="matrix(0.03902285,0,0,0.04215103,0.12327486,-24.557867)"
+       id="g3731"
+       clip-path="url(#clipPath3803)">
+      <title
+         id="title3727">Layer 1</title>
+      <path
+         style="fill:#e2700e;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-miterlimit:4"
+         inkscape:connector-curvature="0"
+         stroke-miterlimit="4"
+         d="M 22.5207,604.68903 91.862396,949.35797 H 328.44 l 59.14401,-334.47198 z"
+         id="path1887" />
+      <path
+         style="fill:#e2700e;fill-rule:evenodd;stroke:#000000;stroke-width:7;stroke-miterlimit:4"
+         inkscape:connector-curvature="0"
+         stroke-miterlimit="4"
+         d="m 14.921005,597.08917 380.821055,-0.55823 v 53.25409 l -380.775447,0.21064 -0.04561,-52.9065 z"
+         id="path1885" />
+    </g>
+  </g>
 </svg>
