@@ -1,0 +1,74 @@
+[
+  {
+    "plantId": "captus_01",
+    "time": "2019-01-01T11:00:00Z",
+    "weather": "Soleado",
+    "temperature": 7,
+    "humidity": 60,
+    "brightness": 50
+  },
+  {
+    "plantId": "captus_01",
+    "time": "2019-01-01T15:30:00Z",
+    "weather": "Nublado",
+    "temperature": 15,
+    "humidity": 40,
+    "brightness": 25
+  },
+  {
+    "plantId": "captus_01",
+    "time": "2019-01-01T20:00:00Z",
+    "weather": "Lluvia",
+    "temperature": 10,
+    "humidity": 100,
+    "brightness": 5
+  },
+  {
+    "plantId": "margarita_01",
+    "time": "2019-01-01T08:00:00Z",
+    "weather": "Nublado",
+    "temperature": 20,
+    "humidity": 50,
+    "brightness": 50
+  },
+  {
+    "plantId": "margarita_01",
+    "time": "2019-01-01T14:30:00Z",
+    "weather": "Nublado",
+    "temperature": 20,
+    "humidity": 60,
+    "brightness": 50
+  },
+  {
+    "plantId": "margarita_01",
+    "time": "2019-01-01T19:15:00Z",
+    "weather": "Lluvia",
+    "temperature": 15,
+    "humidity": 100,
+    "brightness": 5
+  },
+  {
+    "plantId": "helecho_01",
+    "time": "2019-01-01T09:45:00Z",
+    "weather": "Soleado",
+    "temperature": 30,
+    "humidity": 20,
+    "brightness": 100
+  },
+  {
+    "plantId": "helecho_01",
+    "time": "2019-01-01T16:30:00Z",
+    "weather": "Soleado",
+    "temperature": 35,
+    "humidity": 10,
+    "brightness": 100
+  },
+  {
+    "plantId": "helecho_01",
+    "time": "2019-01-01T22:45:00Z",
+    "weather": "Soleado",
+    "temperature": 12,
+    "humidity": 5,
+    "brightness": 100
+  }
+]

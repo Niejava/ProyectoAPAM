@@ -1,0 +1,68 @@
+[
+  {
+    "id": "captus_01",
+    "type": "captus",
+    "img": "",
+    "properties": {
+      "humidity": {
+        "max": 70,
+        "min": 20,
+        "unit":"%"
+      },
+      "temperature": {
+        "max": 120,
+        "min": 20,
+        "unit": "º"
+      },
+      "brightness": {
+        "max": 100,
+        "min": 50,
+        "unit": "%"
+      }
+    }
+  },
+  {
+    "id": "margarita_01",
+    "type": "margarita",
+    "img": "",
+    "properties": {
+      "humidity": {
+        "max": 80,
+        "min": 30,
+        "unit":"%"
+      },
+      "temperature": {
+        "max": 50,
+        "min": 5,
+        "unit": "º"
+      },
+      "brightness": {
+        "max": 100,
+        "min": 30,
+        "unit": "%"
+      }
+    }
+  },
+  {
+    "id": "helecho_01",
+    "type": "helecho",
+    "img": "",
+    "properties": {
+      "humidity": {
+        "max": 100,
+        "min": 35,
+        "unit":"%"
+      },
+      "temperature": {
+        "max": 65,
+        "min": 15,
+        "unit": "º"
+      },
+      "brightness": {
+        "max": 100,
+        "min": 15,
+        "unit": "%"
+      }
+    }
+  }
+]
