@@ -6,8 +6,24 @@ body {
     height: 60vh;
 }
 
+.vh-30 {
+    height: 30vh;
+}
+
 .maceta{
     width: 200px;
     height: 200px;
     transform: translateY(-12vh);
+}
+
+.img_cactus{
+    height: 200px;
+}
+
+.img_girasol{
+    height: 200px;
+}
+
+.img_helecho{
+    height: 200px;
 }
