@@ -1,0 +1,23 @@
+{
+  "name": "proyectoapam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "light-server -s src -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niejava/ProyectoAPAM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niejava/ProyectoAPAM/issues"
+  },
+  "homepage": "https://github.com/Niejava/ProyectoAPAM#readme",
+  "dependencies": {
+    "light-server": "^2.6.2"
+  }
+}
