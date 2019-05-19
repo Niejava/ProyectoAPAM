@@ -1,8 +1,8 @@
 [
   {
-    "id": "captus_01",
-    "type": "captus",
-    "img": "",
+    "id": "cactus_01",
+    "type": "cactus",
+    "img": "cactus.svg",
     "properties": {
       "humidity": {
         "max": 70,
@@ -22,9 +22,9 @@
     }
   },
   {
-    "id": "margarita_01",
-    "type": "margarita",
-    "img": "",
+    "id": "girasol_01",
+    "type": "girasol",
+    "img": "girasol.svg",
     "properties": {
       "humidity": {
         "max": 80,
@@ -46,7 +46,7 @@
   {
     "id": "helecho_01",
     "type": "helecho",
-    "img": "",
+    "img": "helecho.svg",
     "properties": {
       "humidity": {
         "max": 100,
