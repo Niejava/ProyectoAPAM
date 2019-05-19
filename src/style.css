@@ -16,6 +16,12 @@ body {
     transform: translateY(-12vh);
 }
 
+.plant{
+    width: 200px;
+    height: 200px;
+    transform: translateY(-8vh);
+}
+
 .img_cactus{
     height: 200px;
 }

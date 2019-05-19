@@ -1,13 +1,16 @@
 var plants = [];
 var registers = [];
+var elPlant;
 
 function load() {
   init();
 };
 
 function init() {
+  el = document.querySelector('.plant');
   loadPlants();
   loadRegisters();
+  changeUrl();
 }
 
 function loadPlants() {
@@ -38,5 +41,33 @@ function loadRegisters() {
   xmlhttpRegisters.send();
 }
 
+function changeUrl() {
+  if (el) {
+    var query = window.location.search;
+    query = query.split('=')[1];
+    switch (query) {
+      case 'girasol':
+        el.src = 'assets/img/girasol.svg';
+        el.classList.remove('d-none');
+        el.classList.add('d-block');
+        break;
+      case 'helecho':
+        el.src = 'assets/img/helecho.svg';
+        el.classList.remove('d-none');
+        el.classList.add('d-block');
+        break;
+      case 'cactus':
+        el.src = 'assets/img/cactus.svg';
+        el.classList.remove('d-none');
+        el.classList.add('d-block');
+        break;
+      default:
+        el.src = '';
+        el.classList.remove('d-block');
+        el.classList.add('d-none');
+        break;
+  }
+  }
+}
 
 window.onload = load;
