@@ -13,11 +13,10 @@ function init() {
   el = document.querySelector('.plant');
   modal = document.querySelector('.modal');
   tableRegister = document.querySelector('.table-registers');
-  loadPlants(changeUrl);
-  loadRegisters();
+  loadPlants(loadRegisters, changeUrl);
 }
 
-function loadPlants(callback) {
+function loadPlants(callback, callback2) {
   var xmlhttpPlants = new XMLHttpRequest();
   var urlPlants = "/assets/db/plants.json";
 
@@ -39,21 +38,21 @@ function loadPlants(callback) {
         });
       }
 
-      callback();
+      callback(callback2);
     }
   };
   xmlhttpPlants.open("GET", urlPlants, true);
   xmlhttpPlants.send();
 }
 
-function loadRegisters() {
+function loadRegisters(callback) {
   var xmlhttpRegisters = new XMLHttpRequest();
   var urlRegisters = "/assets/db/registers.json";
 
   xmlhttpRegisters.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       registers = JSON.parse(this.responseText);
-      console.log(registers);
+      callback();
     }
   };
   xmlhttpRegisters.open("GET", urlRegisters, true);
