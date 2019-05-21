@@ -38,6 +38,14 @@ body {
     height: 200px;
 }
 
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
 .table-registers {
     display: inline-block;
     width: auto;
