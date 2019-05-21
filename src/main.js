@@ -6,7 +6,7 @@ var el;
 var modal;
 var tableRegister;
 var onForm;
-var selectedRegister;
+var dynamicBackground;
 
 function load() {
   init();
@@ -17,6 +17,7 @@ function init() {
   modal = document.querySelector('.modal');
   tableRegister = document.querySelector('.table-registers');
   onForm = document.forms[0];
+  dynamicBackground = document.querySelector('#dynamic-background');
   loadPlants(loadRegisters, changeUrl);
 
   if (el) {
@@ -175,6 +176,16 @@ function updateRegister () {
     tableRegister.querySelector('.brightness-current').classList.add('green');
     tableRegister.querySelector('.brightness-current').classList.remove('red');
   }
+
+  var tempDate = new Date(elRegister.time);
+  if (tempDate.getHours() >= 21 || tempDate <= 8) {
+    dynamicBackground.classList.remove('day');
+    dynamicBackground.classList.add('night');
+  } else {
+    dynamicBackground.classList.remove('night');
+    dynamicBackground.classList.add('day');
+  }
+
 }
 
 function onSubmit () {
@@ -187,10 +198,6 @@ function onSubmit () {
   elRegister.humidity = newHumidity || 0;
 
   updateRegister();
-}
-
-function onSelectRegister (register) {
-  console.log('r', register)
 }
 
 window.onload = load;
