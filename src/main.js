@@ -5,6 +5,7 @@ var elRegister;
 var el;
 var modal;
 var tableRegister;
+var onForm;
 
 function load() {
   init();
@@ -14,7 +15,26 @@ function init() {
   el = document.querySelector('.plant');
   modal = document.querySelector('.modal');
   tableRegister = document.querySelector('.table-registers');
+  onForm = document.forms[0];
   loadPlants(loadRegisters, changeUrl);
+
+  if (el) {
+    document.querySelector('.update-register').addEventListener('click', function (event) {
+      modal.classList.add('d-block');
+    });
+    document.querySelector('.cancel-modal').addEventListener('click', function (event) {
+      modal.classList.remove('d-block');
+      modal.classList.add('d-none');
+    });
+    document.querySelector('.save-modal').addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      onSubmit();
+
+      modal.classList.remove('d-block');
+      modal.classList.add('d-none');
+    })
+  }
 }
 
 function loadPlants(callback, callback2) {
@@ -78,25 +98,7 @@ function changeUrl() {
       tableRegister.querySelector('.brightness-optimal').innerHTML = elPlant.properties.brightness.min + elPlant.properties.brightness.unit + '-' + elPlant.properties.brightness.max + elPlant.properties.brightness.unit;
       tableRegister.querySelector('.humidity-optimal').innerHTML = elPlant.properties.humidity.min + elPlant.properties.humidity.unit + '-' + elPlant.properties.humidity.max + elPlant.properties.humidity.unit;
 
-      tableRegister.querySelector('.temperature-current').innerHTML = elRegister.temperature + elPlant.properties.temperature.unit;
-      tableRegister.querySelector('.brightness-current').innerHTML = elRegister.brightness + elPlant.properties.brightness.unit;
-      tableRegister.querySelector('.humidity-current').innerHTML = elRegister.humidity + elPlant.properties.humidity.unit;
-
-      if (elRegister.temperature < elPlant.properties.temperature.min || elRegister.temperature > elPlant.properties.temperature.max) {
-        tableRegister.querySelector('.temperature-current').classList.add('red');
-      } else {
-        tableRegister.querySelector('.temperature-current').classList.add('green');
-      }
-      if (elRegister.humidity < elPlant.properties.humidity.min || elRegister.humidity > elPlant.properties.humidity.max) {
-        tableRegister.querySelector('.humidity-current').classList.add('red');
-      } else {
-        tableRegister.querySelector('.humidity-current').classList.add('green');
-      }
-      if (elRegister.brightness < elPlant.properties.brightness.min || elRegister.brightness > elPlant.properties.brightness.max) {
-        tableRegister.querySelector('.brightness-current').classList.add('red');
-      } else {
-        tableRegister.querySelector('.brightness-current').classList.add('green');
-      }
+     updateRegister();
 
     } else {
       el.src = '';
@@ -114,6 +116,50 @@ function changeUrl() {
       tableRegister.querySelector('.humidity-current').innerHTML = '';
     }
   }
+}
+
+function updateRegister () {
+  tableRegister.querySelector('.temperature-current').innerHTML = elRegister.temperature + elPlant.properties.temperature.unit;
+  tableRegister.querySelector('.brightness-current').innerHTML = elRegister.brightness + elPlant.properties.brightness.unit;
+  tableRegister.querySelector('.humidity-current').innerHTML = elRegister.humidity + elPlant.properties.humidity.unit;
+
+  onForm.elements["temperature"].value = elRegister.temperature;
+  onForm.elements["brightness"].value =  elRegister.brightness;
+  onForm.elements["humidity"].value = elRegister.humidity;
+
+  if (elRegister.temperature < elPlant.properties.temperature.min || elRegister.temperature > elPlant.properties.temperature.max) {
+    tableRegister.querySelector('.temperature-current').classList.add('red');
+    tableRegister.querySelector('.temperature-current').classList.remove('green');
+  } else {
+    tableRegister.querySelector('.temperature-current').classList.add('green');
+    tableRegister.querySelector('.temperature-current').classList.remove('red');
+  }
+  if (elRegister.humidity < elPlant.properties.humidity.min || elRegister.humidity > elPlant.properties.humidity.max) {
+    tableRegister.querySelector('.humidity-current').classList.add('red');
+    tableRegister.querySelector('.humidity-current').classList.remove('green');
+  } else {
+    tableRegister.querySelector('.humidity-current').classList.add('green');
+    tableRegister.querySelector('.humidity-current').classList.remove('red');
+  }
+  if (elRegister.brightness < elPlant.properties.brightness.min || elRegister.brightness > elPlant.properties.brightness.max) {
+    tableRegister.querySelector('.brightness-current').classList.add('red');
+    tableRegister.querySelector('.brightness-current').classList.remove('green');
+  } else {
+    tableRegister.querySelector('.brightness-current').classList.add('green');
+    tableRegister.querySelector('.brightness-current').classList.remove('red');
+  }
+}
+
+function onSubmit () {
+  newTemperature = onForm.elements["temperature"].value;
+  newBrightness = onForm.elements["brightness"].value;
+  newHumidity = onForm.elements["humidity"].value;
+
+  elRegister.temperature = newTemperature || 0;
+  elRegister.brightness = newBrightness || 0;
+  elRegister.humidity = newHumidity || 0;
+
+  updateRegister();
 }
 
 window.onload = load;
