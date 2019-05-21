@@ -6,15 +6,23 @@ body {
     height: calc(100vh - 56px);
     background-image: url(assets/img/cesped.jpg);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
+    background-size: cover;
 }
 
 .vh-60 {
     height: 60vh;
-    background-image: url(assets/img/fondo_dia.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top;
+}
+
+.day {
+    background-image: url(assets/img/fondo_dia.jpg);
+}
+
+.night{
+    background-image: url(assets/img/fondo_noche.jpg);
 }
 
 .vh-30 {
@@ -90,6 +98,6 @@ body {
     position: relative;
     left: 35%;
     right: 50%;
-    top: 150px;  
+    top: 150px;
 }
 
