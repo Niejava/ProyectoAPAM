@@ -1,9 +1,13 @@
 body {
-    background-color: #ffffff
+   
 }
 
 .vh-60 {
     height: 60vh;
+    background-image: url(assets/img/fondo_dia.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-position: top, 
 }
 
 .vh-30 {
@@ -63,3 +67,12 @@ body {
     background-color: #fff;
     border-radius: 2px;
 }
+.table-registers2 {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    left: 40%;
+    right: 50%;
+    top: 250px;  
+}
+
