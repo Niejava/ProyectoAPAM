@@ -6,6 +6,7 @@ var el;
 var modal;
 var tableRegister;
 var onForm;
+var selectedRegister;
 
 function load() {
   init();
@@ -51,7 +52,7 @@ function loadPlants(callback, callback2) {
           var col = document.createElement('div');
           col.classList.add('col');
           col.innerHTML = `
-            <a href="/?plant=${p.type}">
+            <a href="/?plant=${p.id}">
                 <img class="img_${p.type} rounded mx-auto d-block img-thumbnail" src="assets/img/${p.img}" alt="${p.type}">
             </a>
           `;
@@ -73,6 +74,27 @@ function loadRegisters(callback) {
   xmlhttpRegisters.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       registers = JSON.parse(this.responseText);
+
+      var elRegisterTable = document.querySelector('.tbody-registers');
+      if (elRegisterTable) {
+        registers.forEach(function(p, index) {
+          var col = document.createElement('tr');
+          col.classList.add('d-flex');
+          col.innerHTML = `
+            <td scope="row" class="col">${p.plantId}</td>
+              <td scope="row" class="col">${new Date(p.time).toLocaleString()}</td>
+              <td scope="row" class="col">${p.weather}</td>
+              <td scope="row" class="col">${p.temperature}</td>
+              <td scope="row" class="col">${p.humidity}</td>
+              <td scope="row" class="col">${p.brightness}</td>
+              <td scope="row" class="col-3"><button type="button" class="btn bg-primary btn-block" id="btn-${p.plantId}-${index}" style="color: white"><b>Seleccionar</b></button></td>
+          `;
+          elRegisterTable.appendChild(col);
+          document.querySelector('#btn-' + p.plantId + '-' + index).addEventListener('click', function(b) {
+            window.location.href = '/?plant=' + p.plantId + '&register=' + p.id;
+          });
+        });
+      }
       callback();
     }
   };
@@ -82,11 +104,16 @@ function loadRegisters(callback) {
 
 function changeUrl() {
   if (el) {
-    var query = window.location.search;
-    query = query.split('plant=')[1];
-    if (query) {
-      elPlant = plants.find(x => x.type === query);
-      elRegister = registers[0];
+    var query = new URLSearchParams(window.location.search);
+    var queryPlant = query.get('plant');
+    var queryRegister= query.get('register');
+    if (queryPlant) {
+      elPlant = plants.find(x => x.id === queryPlant);
+      if (queryRegister) {
+        elRegister = registers.find(x => x.id === queryRegister);
+      } else {
+        elRegister = registers[0];
+      }
       el.src = 'assets/img/' + elPlant.img;
       el.classList.remove('d-none');
       el.classList.add('d-block');
@@ -160,6 +187,10 @@ function onSubmit () {
   elRegister.humidity = newHumidity || 0;
 
   updateRegister();
+}
+
+function onSelectRegister (register) {
+  console.log('r', register)
 }
 
 window.onload = load;

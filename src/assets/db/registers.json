@@ -1,6 +1,7 @@
 [
   {
-    "plantId": "captus_01",
+    "id": "0",
+    "plantId": "cactus_01",
     "time": "2019-01-01T11:00:00Z",
     "weather": "Soleado",
     "temperature": 7,
@@ -8,7 +9,8 @@
     "brightness": 50
   },
   {
-    "plantId": "captus_01",
+    "id": "1",
+    "plantId": "cactus_01",
     "time": "2019-01-01T15:30:00Z",
     "weather": "Nublado",
     "temperature": 15,
@@ -16,7 +18,8 @@
     "brightness": 25
   },
   {
-    "plantId": "captus_01",
+    "id": "2",
+    "plantId": "cactus_01",
     "time": "2019-01-01T20:00:00Z",
     "weather": "Lluvia",
     "temperature": 10,
@@ -24,7 +27,8 @@
     "brightness": 5
   },
   {
-    "plantId": "margarita_01",
+    "id": "3",
+    "plantId": "girasol_01",
     "time": "2019-01-01T08:00:00Z",
     "weather": "Nublado",
     "temperature": 20,
@@ -32,7 +36,8 @@
     "brightness": 50
   },
   {
-    "plantId": "margarita_01",
+    "id": "4",
+    "plantId": "girasol_01",
     "time": "2019-01-01T14:30:00Z",
     "weather": "Nublado",
     "temperature": 20,
@@ -40,7 +45,8 @@
     "brightness": 50
   },
   {
-    "plantId": "margarita_01",
+    "id": "5",
+    "plantId": "girasol_01",
     "time": "2019-01-01T19:15:00Z",
     "weather": "Lluvia",
     "temperature": 15,
@@ -48,6 +54,7 @@
     "brightness": 5
   },
   {
+    "id": "6",
     "plantId": "helecho_01",
     "time": "2019-01-01T09:45:00Z",
     "weather": "Soleado",
@@ -56,6 +63,7 @@
     "brightness": 100
   },
   {
+    "id": "7",
     "plantId": "helecho_01",
     "time": "2019-01-01T16:30:00Z",
     "weather": "Soleado",
@@ -64,6 +72,7 @@
     "brightness": 100
   },
   {
+    "id": "8",
     "plantId": "helecho_01",
     "time": "2019-01-01T22:45:00Z",
     "weather": "Soleado",
