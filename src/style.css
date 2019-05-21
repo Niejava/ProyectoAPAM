@@ -1,13 +1,21 @@
 body {
-   
+    min-height: 100vh;
+}
+
+.main {
+    height: 100%;
+    background-image: url(assets/img/cesped.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
 }
 
 .vh-60 {
     height: 60vh;
     background-image: url(assets/img/fondo_dia.jpg);
     background-repeat: no-repeat;
-    background-size: 100%; 
-    background-position: top, 
+    background-size: 100%;
+    background-position: top;
 }
 
 .vh-30 {
@@ -52,6 +60,8 @@ body {
     position: absolute;
     top: 76px;
     left: 20px;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .modal {
@@ -81,6 +91,6 @@ body {
     position: relative;
     left: 40%;
     right: 50%;
-    top: 250px;  
+    top: 250px;
 }
 
