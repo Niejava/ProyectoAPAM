@@ -3,10 +3,9 @@ body {
 }
 
 .main {
-    height: 100%;
+    height: calc(100vh - 56px);
     background-image: url(assets/img/cesped.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
     background-position: top;
 }
 
